@@ -1,0 +1,12 @@
+// add todo component shows add todo 
+<app-add-todo (addTodo) = "addTodo($event)"></app-add-todo>
+
+// iterate current tasks
+<app-todo-item 
+    
+    *ngFor="let todo of todos" 
+    [todo]="todo"
+    (deleteTodo) = "deleteTodo($event)"
+>
+
+</app-todo-item>
